@@ -1,6 +1,6 @@
 <!doctype html>
 {% load static %}
-
+{% load thumbnail %}
 <html lang="ru">
 
 <head>
@@ -13,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
-    <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 
     {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -22,6 +22,13 @@
 </head>
 
 <body class="bg-light">
+
+    {% comment %}  https://github.com/SmileyChris/easy-thumbnails
+    {% thumbnail item.image "100x100" crop="center" as im %}
+    <img src="{% static "images/aikido.jpg" %}" class="img-fluid" alt="Responsive image">
+    {% endthumbnail %} {% endcomment %}
+
+    <img src="{% static "images/aikido.jpg" %}" class="img-fluid" alt="Responsive image">
 
     <div class="container">
         <div class="py-5 text-center">
@@ -131,8 +138,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{STATIC_URL}}js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="{% static "js/jquery-3.3.1.slim.min.js" %}"></script>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {

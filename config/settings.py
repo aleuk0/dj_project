@@ -37,9 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'psycopg2',
+
     'treebeard',
     'mptt',
+
     'rest_framework_swagger',
+
+    'easy_thumbnails',
+    # 'sorl.thumbnail',
 
     'apps.fooo',
 ]
@@ -78,10 +84,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '030119NewDB',
+        'USER': 'al',
+        'PASSWORD': 'zxcasdqwe',
+        'HOST': '',
+        'PORT': '5432',
     }
 }
 
@@ -130,5 +148,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'template_static'),
 ]
-
-APPEND_SLASH = False
