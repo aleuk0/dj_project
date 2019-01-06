@@ -3,6 +3,8 @@
 ✔ 1.3 thumbnail
 ✔ 2. postgresql
 3. rest api + swagger
+3.1 vsc save formating
 4. docker
 5. vector map
 6. ajax + js + jquery something
+6.1 angular
