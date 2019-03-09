@@ -4,7 +4,8 @@
 ✔ 2. postgresql
 ✔ 3. rest api + swagger
 ✔ 3.1 vsc save formating = ctrl+k ctrl+shft+s
-4. docker
+✔ 3.2 vsc copy line = shft+alt+up/down
+4. docker-compose or simple docker
 5. vector map
 6. ajax + js + jquery something
 6.1 angular
